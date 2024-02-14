@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
+  --foreground-rgb: 38, 38, 38;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
@@ -18,12 +18,27 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+}
+
+.tabs_home .ant-tabs >.ant-tabs-nav {
+  margin: 0;
+  border: none;
+}
+
+.tabs_home .ant-tabs-nav .ant-tabs-tab {
+  border-radius:  unset;
+  border: none;
+  background: unset;
+  padding: 26px 30px 5px 30px;
+}
+
+.tabs_home .ant-tabs-card >.ant-tabs-nav .ant-tabs-tab-active {
+  background: #D9EDFF;
+  transform: skewX(-20deg);
+}
+
+.tabs_home .ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  transform: skewX(20deg);
 }
 
 @layer utilities {
